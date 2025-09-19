@@ -8,6 +8,10 @@ import Signup from './components/auth/Signup.jsx'
 import Home from './components/home.jsx'
 import Jobs from './components/Jobs.jsx'
 
+
+
+
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Browse from './components/Browse'
 import Profile from './components/Profile'
