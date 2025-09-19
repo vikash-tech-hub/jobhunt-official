@@ -22,7 +22,7 @@ import Companysetup from './components/admin/Companysetup'
 import Adminjobs from './components/admin/Adminjobs'
 import Postjob from './components/admin/PostJob'
 import Applicants from './components/admin/Applicants'
-import ProtectedRoute from './components/admin/Projectedroutes'
+import ProtectedRoute from './components/admin/ProjectedRoutes'
 const approuter = createBrowserRouter([
   {
     path: "/",
