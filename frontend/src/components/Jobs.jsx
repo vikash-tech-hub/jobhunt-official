@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Filtercard from './Filtercard'
-import Job from './job'
+import Job from './Job'
 import Navbar from './shared/Navbar'
 import { useSelector } from 'react-redux'
 import { AnimatePresence, motion } from 'framer-motion'
