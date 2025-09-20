@@ -1,12 +1,16 @@
-import express from 'express';
+import express from "express";
+import { register, login, logout, updateProfile } from "../controllers/user.controller.js";
+import { isAuthenticated } from "../middleware/isAuthenticated.js";
+import { singleUpload } from "../utils/multer.js";
 
 const router = express.Router();
-import { register, login, updateProfile, logout } from '../controllers/user.controller.js';
-import isAuthenticated from '../middlewares/isAuthenticated.js';
-import { singleUpload } from '../middlewares/multer.js';
-router.route('/register').post(singleUpload,register);
-router.route('/login').post(login); 
-router.route("/logout").get(logout)
-router.route("/profile/update").post(isAuthenticated,singleUpload,updateProfile);
+
+// Auth routes
+router.post("/register", singleUpload, register);
+router.post("/login", login);
+router.get("/logout", logout);
+
+// Profile update (protected)
+router.put("/profile/update", isAuthenticated, singleUpload, updateProfile);
 
 export default router;
