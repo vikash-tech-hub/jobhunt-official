@@ -19,7 +19,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
  
 app.use(cors({
-  origin: ["http://localhost:5173", "https://jobhunt-official.vercel.app"],
+  origin: [
+    "http://localhost:5173", // local dev
+    "https://jobhunt-official-quy7hopdm-vikash-tech-hubs-projects.vercel.app" // your deployed frontend
+  ],
   credentials: true
 }));
 
