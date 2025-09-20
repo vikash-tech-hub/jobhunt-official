@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: ["http://localhost:5173", "https://your-frontend.vercel.app"], // ✅ frontend URLs
+  origin: ["http://localhost:5173", "https://jobhunt-official.vercel.app"], // ✅ frontend URLs
   credentials: true,
 }));
 
